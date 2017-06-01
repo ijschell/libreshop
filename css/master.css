@@ -8,6 +8,9 @@ html, body {
 body {
   font-size: 15px; }
 
+.container-fluid {
+  max-width: 1200px; }
+
 .button {
   font-size: 1.5em;
   width: 250px;
@@ -64,5 +67,10 @@ h4 {
 .blue {
   background: #26c6da;
   color: #fff; }
+
+footer {
+  background: #333;
+  color: #fff;
+  min-height: 70px; }
 
 /*# sourceMappingURL=master.css.map */
