@@ -1,0 +1,76 @@
+@mixin centerd {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+html, body{
+  height: 100%;
+}
+body{
+  //background: black;
+  font-size: 15px;
+}
+.button{
+  font-size: 1.5em;
+  width: 250px;
+  height: 60px;
+  border-right: solid 1px #6ea237;
+  border-bottom: solid 1px #6ea237;
+  box-shadow: 5px 5px 0px #4b830d;
+  display: block;
+  line-height: 60px;
+  background: #7cb342;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  &:hover{
+    text-decoration: none;
+    color: #fff;
+  }
+  &:focus{
+    text-decoration: none;
+    color: #fff;
+  }
+}
+h1{
+  font-size: 4em;
+}
+h2{
+  font-size: 3em;
+}
+h3{
+  font-size: 2em;
+}
+h4{
+  font-size: 1.5em;
+}
+.bg-head{
+  height: 100%;
+  header{
+    height: 70px;
+  }
+  #head{
+    position: relative;
+    height: calc(100% - 70px);
+    >div{
+      @include centerd;
+      transform: translate(-50%, calc(-50% - 70px));
+      text-align: center;
+    }
+  }
+}
+.section{
+  min-height: 50%;
+  height: auto;
+  padding: 50px 0;
+  color: #333;
+}
+.blue{
+  background: #26c6da;
+  color: #fff;
+}
