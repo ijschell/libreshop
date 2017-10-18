@@ -1,0 +1,53 @@
+@function suma($value1, $value2) {
+  @return $value1 + $value2;
+}
+
+@function responsive($value1, $value2) {
+  @return ($value1 / 4) *  $value2;
+}
+
+$normal-size: 16px;
+
+$normal-size-tablet: 14px;
+
+$normal-size-mobile: 12px;
+
+$small-size: 0.8em;
+
+$big-size: 1.2em;
+
+$h1: 2.5em;
+$h2: 2.2em;
+$h3: 1.9em;
+$h4: 1.5em;
+$h5: 1.3em;
+
+$h1-tablet: responsive($h1, 3);
+$h2-tablet: responsive($h2, 3);
+$h3-tablet: responsive($h3, 3);
+$h4-tablet: responsive($h4, 3);
+$h5-tablet: responsive($h5, 3);
+
+$h1-mobile: responsive($h1, 2);
+$h2-mobile: responsive($h2, 2);
+$h3-mobile: responsive($h3, 2);
+$h4-mobile: responsive($h4, 2);
+$h5-mobile: responsive($h5, 2);
+
+$color-link: #44afe5;
+$color-link-hover: #0056b3;
+/*márgenes*/
+$margen-externo: 120px;
+$margen-interno: 80px;
+$margen-titulos: 60px;
+$margen-parrafos: 40px;
+
+$margen-externo-tablet: responsive($margen-externo, 3);
+$margen-interno-tablet: responsive($margen-interno, 3);
+$margen-titulos-tablet: responsive($margen-titulos, 3);
+$margen-parrafos-tablet: responsive($margen-parrafos, 3);
+
+$margen-externo-mobile: responsive($margen-externo, 2);
+$margen-interno-mobile: responsive($margen-interno, 2);
+$margen-titulos-mobile: responsive($margen-titulos, 2);
+$margen-parrafos-mobile: responsive($margen-parrafos, 2);

@@ -1,0 +1,18 @@
+/*
+light: 300
+Regualr: 400
+Medium: 600
+Bold: 700
+*/
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+a {
+  color: $color-link;
+}
+a:hover {
+  text-decoration: underline;
+  color: $color-link-hover;
+}
+@include responsive();
