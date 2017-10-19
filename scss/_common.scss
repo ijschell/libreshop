@@ -45,3 +45,15 @@ a:hover {
 .container-fluid{
   max-width: 1200px;
 }
+.bg-black{
+  background: $bg-black;
+  h2{
+    color: #fff;
+  }
+  h3{
+    color: #fff;
+  }
+  h4{
+    color: #fff;
+  }
+}
