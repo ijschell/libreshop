@@ -67,6 +67,16 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400; }
 
+h1, h2, h3, h4, h5 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300; }
+
+h2 {
+  color: #333; }
+
+h3 {
+  color: #555; }
+
 a {
   color: #44afe5; }
 
@@ -84,23 +94,23 @@ p {
   line-height: 24px; }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 4em;
   margin-bottom: 60px; }
 
 h2 {
-  font-size: 2.2em;
+  font-size: 3.5em;
   margin-bottom: 60px; }
 
 h3 {
-  font-size: 1.9em;
+  font-size: 3em;
   margin-bottom: 60px; }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 2.5em;
   margin-bottom: 60px; }
 
 h5 {
-  font-size: 1.3em;
+  font-size: 2em;
   margin-bottom: 60px; }
 
 .small-text {
@@ -110,10 +120,10 @@ h5 {
   font-size: 1.2em; }
 
 section {
-  margin: 120px 0; }
+  padding: 120px 0; }
 
 div.sub-section {
-  margin: 0 0 80px 0; }
+  padding: 0 0 80px 0; }
 
 @media (max-width: 768px) {
   body {
@@ -126,30 +136,30 @@ div.sub-section {
     line-height: 22px; }
 
   h1 {
-    font-size: 1.875em;
+    font-size: 3em;
     margin-bottom: 45px; }
 
   h2 {
-    font-size: 1.65em;
+    font-size: 2.625em;
     margin-bottom: 45px; }
 
   h3 {
-    font-size: 1.425em;
+    font-size: 2.25em;
     margin-bottom: 45px; }
 
   h4 {
-    font-size: 1.125em;
+    font-size: 1.875em;
     margin-bottom: 45px; }
 
   h5 {
-    font-size: 0.975em;
+    font-size: 1.5em;
     margin-bottom: 45px; }
 
   section {
-    margin: 90px 0; }
+    padding: 90px 0; }
 
   div.sub-section {
-    margin: 0 0 60px 0; } }
+    padding: 0 0 60px 0; } }
 @media (max-width: 576px) {
   body {
     font-size: 12px;
@@ -161,29 +171,144 @@ div.sub-section {
     line-height: 20px; }
 
   h1 {
-    font-size: 1.25em;
+    font-size: 2em;
     margin-bottom: 30px; }
 
   h2 {
-    font-size: 1.1em;
+    font-size: 1.75em;
     margin-bottom: 30px; }
 
   h3 {
-    font-size: 0.95em;
+    font-size: 1.5em;
     margin-bottom: 30px; }
 
   h4 {
-    font-size: 0.75em;
+    font-size: 1.25em;
     margin-bottom: 30px; }
 
   h5 {
-    font-size: 0.65em;
+    font-size: 1em;
     margin-bottom: 30px; }
 
   section {
-    margin: 60px 0; }
+    padding: 60px 0; }
 
   div.sub-section {
-    margin: 0 0 40px 0; } }
+    padding: 0 0 40px 0; } }
+.big-size {
+  font-size: 1.2em; }
+
+.small-size {
+  font-size: 0.8em; }
+
+.overlay-black {
+  background: rgba(0, 0, 0, 0.7); }
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: table; }
+
+.container-fluid {
+  max-width: 1200px; }
+
+header {
+  height: 100%;
+  overflow-y: hidden; }
+  header .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center; }
+    header .wrapper h1 {
+      text-indent: -10000px;
+      display: block;
+      width: 322px;
+      height: 98px;
+      margin: auto;
+      background-image: url("../images/logotipo.png");
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 60px; }
+    header .wrapper p {
+      color: #fff; }
+    header .wrapper .mouse-scroll {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%); }
+      header .wrapper .mouse-scroll .scrollIndicator {
+        position: relative;
+        cursor: pointer; }
+        header .wrapper .mouse-scroll .scrollIndicator svg {
+          height: 34px;
+          width: 22px; }
+          header .wrapper .mouse-scroll .scrollIndicator svg path {
+            stroke: #fff;
+            stroke-width: 2px;
+            stroke-dasharray: 200;
+            stroke-dashoffset: 100;
+            fill: rgba(255, 255, 255, 0);
+            animation-name: mouse;
+            animation-duration: 1.5s;
+            animation-iteration-count: 1;
+            -webkit-transition: fill 350ms ease;
+            -moz-transition: fill 350ms ease;
+            -ms-transition: fill 350ms ease;
+            -o-transition: fill 350ms ease;
+            transition: fill 350ms ease; }
+        header .wrapper .mouse-scroll .scrollIndicator div {
+          background-color: #fff;
+          width: 4px;
+          height: 4px;
+          position: absolute;
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -webkit-animation: scrollIndicator 1s infinite;
+          /* Safari 4.0 - 8.0 */
+          animation: scrollIndicator 1s infinite; }
+    header .wrapper .toolbar {
+      position: absolute;
+      top: 0;
+      height: 30px;
+      width: 100%; }
+      header .wrapper .toolbar a {
+        float: right;
+        margin: 15px 30px; }
+        header .wrapper .toolbar a i {
+          color: #fff; }
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -100; }
+
+@keyframes scrollIndicator {
+  0% {
+    top: 20%;
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    top: 70%;
+    opacity: 0; } }
+section {
+  background: #fff; }
+  section h2 {
+    text-align: center; }
+  section h3 {
+    text-align: center; }
 
 /*# sourceMappingURL=master.css.map */

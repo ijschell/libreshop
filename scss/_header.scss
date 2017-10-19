@@ -1,0 +1,106 @@
+header{
+  height: 100%;
+  overflow-y: hidden;
+  .wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    h1{
+      text-indent: -10000px;
+      display: block;
+      width: 322px;
+      height: 98px;
+      margin: auto;
+      background-image: url('../images/logotipo.png');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 60px;
+    }
+    p{
+        color: #fff;
+    }
+    .mouse-scroll{
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      .scrollIndicator {
+        position: relative;
+        cursor: pointer;
+        svg {
+          height: 34px;
+          width: 22px;
+          path{
+            stroke: #fff;
+            stroke-width: 2px;
+            stroke-dasharray: 200;
+            stroke-dashoffset: 100;
+            fill: rgba(255, 255, 255, 0);
+            animation-name: mouse;
+            animation-duration: 1.5s;
+            animation-iteration-count: 1;
+            -webkit-transition: fill 350ms ease;
+            -moz-transition: fill 350ms ease;
+            -ms-transition: fill 350ms ease;
+            -o-transition: fill 350ms ease;
+            transition: fill 350ms ease;
+          }
+        }
+        div{
+          background-color: #fff;
+          width: 4px;
+          height: 4px;
+          position: absolute;
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -webkit-animation: scrollIndicator 1s infinite;
+          /* Safari 4.0 - 8.0 */
+          animation: scrollIndicator 1s infinite;
+        }
+      }
+    }
+    .toolbar{
+      position: absolute;
+      top: 0;
+      height: 30px;
+      width: 100%;
+      a{
+        float: right;
+        margin: 15px 30px;
+        i{
+          color: #fff;
+        }
+      }
+    }
+  }
+  video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -100;
+  }
+}
+@keyframes scrollIndicator {
+  0% {
+    top: 20%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 70%;
+    opacity: 0;
+  }
+}

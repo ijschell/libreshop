@@ -69,10 +69,10 @@ table {
     font-size: $big-size;
   }
   section{
-    margin: $margen-externo 0;
+    padding: $margen-externo 0;
   }
   div.sub-section{
-    margin: 0 0 $margen-interno 0;
+    padding: 0 0 $margen-interno 0;
   }
   //1024
   @media(max-width: 1024px){
@@ -110,10 +110,10 @@ table {
       margin-bottom: $margen-titulos-tablet;
     }
     section{
-      margin: $margen-externo-tablet 0;
+      padding: $margen-externo-tablet 0;
     }
     div.sub-section{
-      margin: 0 0 $margen-interno-tablet 0;
+      padding: 0 0 $margen-interno-tablet 0;
     }
   }
   //576
@@ -148,10 +148,10 @@ table {
       margin-bottom: $margen-titulos-mobile;
     }
     section{
-      margin: $margen-externo-mobile 0;
+      padding: $margen-externo-mobile 0;
     }
     div.sub-section{
-      margin: 0 0 $margen-interno-mobile 0;
+      padding: 0 0 $margen-interno-mobile 0;
     }
   }
 }

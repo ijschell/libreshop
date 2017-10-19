@@ -8,6 +8,16 @@ body{
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
+h1, h2, h3, h4, h5{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+h2{
+  color: $h2-color;
+}
+h3{
+  color: $h3-color;
+}
 a {
   color: $color-link;
 }
@@ -16,3 +26,22 @@ a:hover {
   color: $color-link-hover;
 }
 @include responsive();
+.big-size{
+  font-size: $big-size;
+}
+.small-size{
+  font-size: $small-size;
+}
+.overlay-black{
+  background: rgba(0,0,0,0.7);
+}
+.centered{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: table;
+}
+.container-fluid{
+  max-width: 1200px;
+}
