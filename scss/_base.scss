@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5 {font-weight: normal;}
 a:visited {text-decoration: none;}
 a:hover {text-decoration: none;}
 a:focus {text-decoration: none;}
-a:focus,:focus {outline: 1px dotted #000;}
+a:focus,:focus {outline: none}
 a:hover,a:active {outline: none;}
 ol li, ul ol li {list-style-type: none;}
 ul li {list-style-type: none;}

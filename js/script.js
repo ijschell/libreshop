@@ -17,5 +17,15 @@ $(document).ready(function(){
       $('section.chars .car').addClass('fadeInLeft');
       $('section.chars .cel').addClass('fadeInRight');
     }
-  })
+  });
+
+  $('.slick-slider').slick({
+    infinite: true,
+    arrows: false,
+    dots: true
+  });
+
+  $('.chars-section .slick-dots li:nth-child(1) button').text('Fácil');
+  $('.chars-section .slick-dots li:nth-child(2) button').text('Rápido');
+  $('.chars-section .slick-dots li:nth-child(3) button').text('Seguro');
 })
