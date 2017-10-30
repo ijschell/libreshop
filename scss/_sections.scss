@@ -120,6 +120,22 @@ section.chars{
       }
     }
   }
+  p{
+    color: #afafaf;
+  }
+  .subtitle{
+    color: #fff;
+  }
+  .more-information{
+    margin-top: 0;
+    transition: all 1s ease;
+    overflow: hidden;
+    max-height: 0;
+    &.active{
+      max-height: 1500px;
+      margin-top: $margen-interno;
+    }
+  }
 }
 .slick-dots{
   li{
@@ -147,6 +163,39 @@ section.chars{
       &:before{
         content: '';
         display: none;
+      }
+    }
+  }
+}
+.stepbystep{
+  overflow: hidden;
+  > div{
+    position: relative;
+    width: 500%;
+    .steps{
+      display: block;
+      width: calc(100% / 5);
+      position: relative;
+      left: 0%;
+      height: 100%;
+      float: left;
+      transition: all 0.5s ease;
+      opacity: 0;
+      &.active{
+        opacity: 1;
+      }
+      .content-options{
+        display: table;
+        margin: auto;
+        max-width: calc(100% - 60px);
+        .btn-no{
+          margin: 0 15px 0 0;
+          display: inline-block;
+        }
+        .btn-yes{
+          margin: 0 0 0 15px;
+          display: inline-block;
+        }
       }
     }
   }
