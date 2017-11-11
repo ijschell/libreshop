@@ -11,17 +11,11 @@ $(document).on('mouseover', 'header .wrapper .toolbar a', function(){
 $(document).on('click', '.btn-more', function(e){
   e.preventDefault();
   $(this).next('.more-information').addClass('active');
-  setTimeout(function(){
-    $('html, body').animate({
-        scrollTop: $('.btn-more').offset().top
-    }, 1000);
-  }, 1000);
 })
 
 $(document).ready(function(){
   var charTop = $(".chars").offset().top - 200;
   $(window).scroll(function(){
-    console.log(charTop + ' - ' + $(window).scrollTop());
     if($(window).scrollTop() > charTop){
       $('section.chars .cat').addClass('fadeInUp');
       $('section.chars .car').addClass('fadeInLeft');
@@ -40,12 +34,13 @@ $(document).ready(function(){
   $('.chars-section .slick-dots li:nth-child(3) button').text('Seguro');
 
   stepByStep();
+
+  sendForm();
 })
 
 function stepByStep(){
   $(document).on('click', '.stepbystep .next-step', function(e){
     e.preventDefault();
-    console.log($(this).parents('.steps'));
     var step = $(this).parents('.steps')[0].classList[0];
     switch(step){
       case 'step1':
@@ -60,22 +55,56 @@ function stepByStep(){
       break;
     }
   })
+
   $(document).on('click', '.stepbystep .next-step-yes', function(e){
     e.preventDefault();
     $('.stepbystep .steps').css('left', 'calc((-100% / 5) * 3)');
     $('.stepbystep .step2').removeClass('active');
     $('.stepbystep .step4').addClass('active');
   });
+
   $(document).on('click', '.stepbystep .btn-go-form', function(e){
     e.preventDefault();
     var option = $(this).attr('data-option');
     if(option == 'web'){
-      $('form input[type="hidden"]').val('web');
+      $('form input[type="hidden"]').val('tiene_web');
     }else {
-      $('form input[type="hidden"]').val('noweb');
+      $('form input[type="hidden"]').val('no_tiene_web');
     }
     $('.stepbystep .steps').css('left', 'calc((-100% / 5) * 4)');
     $('.stepbystep .steps').removeClass('active');
     $('.stepbystep .step5').addClass('active');
+  })
+}
+
+function sendForm(){
+  $('form').submit(function(e){
+    e.preventDefault();
+    var name = $('form input[name="name"]').val();
+    var mail = $('form input[name="mail"]').val();
+    var phone = $('form input[name="phone"]').val();
+    var comment = $('form textarea').val();
+    var haveWeb = $('form input[name="option"]').val();
+    $('form').fadeOut();
+    $('.step5 h3').fadeOut();
+    $.ajax({
+      url : './engine/contact.php',
+      method : 'post',
+      data : {
+        name : name,
+        mail : mail,
+        phone : phone,
+        comment : comment,
+        haveweb : haveWeb
+      },
+      success: function(){
+        $('.resultado').fadeIn();
+      }
+    }).done(function(data){
+      setTimeout(function(){
+        $('.resultado').html(data);
+      }, 1500);
+    })
+
   })
 }
