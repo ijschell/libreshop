@@ -18,7 +18,7 @@ $titulo    = 'Nuevo contacto desde Libre Shop Web';
 $cabeceras = 'From: contacto@libreshop.com' . "\r\n" .
 'Reply-To: '.$mail. "\r\n" .
 'MIME-Version: 1.0'."\r\n".
-'Content-Type: text/html; charset=ISO-8859-1';
+'Content-Type: text/html; charset=utf-8';
 
 $mensaje = '
 <style>
